@@ -1,0 +1,241 @@
+body{
+    background: #D7BDE2 ;
+}
+
+.myinfo
+{
+    position: relative;
+    top: 250px;
+    left: 80px;
+    width: 500px;
+    color:white;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+}
+.myinfo h1{
+    font-family: 'Ballet';
+    font-weight: bold;
+    font-size: 60px;
+    color: black;
+}
+.myinfo p{
+    font-size: 20px;
+    font-weight: bold;
+}
+nav {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0 5%;
+	height: 100px;
+    background: black;
+
+}
+nav .logo {
+	float: left;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	color: #fff;
+}
+nav .links {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	/*justify-content: space-around;*/
+	align-items: center;
+}
+nav .links li {
+	list-style: none;
+}
+nav .links a {
+	display: block;
+	padding: 1em;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+}
+#nav-toggle {
+	position: absolute;
+	top: -100px;
+}
+nav .icon-burger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+	nav .logo {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+	nav .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(0,0,0,.8);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	nav .links a {
+		font-size: 20px;
+	}
+	nav :checked ~ .links {
+		bottom: 0;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+	
+}
+
+.accordion1{
+    margin-top: 450px;
+    
+  }
+  .accordion1 h2{
+    text-align: center;
+    font-size: 3.5rem;;
+    justify-content: center;
+    font-family: "Sofia", sans-serif;
+    
+  }
+  
+  
+  .accordion {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+  }
+
+  .accordion-item {
+    background-color: #fff;
+    color: #000;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 2px 5px 5px 4px rgba(0,0,0,0.25);
+  }
+  .description h1{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+  .description p{
+    margin-top: 10px;
+    color: red;
+  }
+  .button a{
+    padding: 0.6rem 1.4rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    border: 2px solid #fafafa;
+    font-size: 0.75rem;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 20px;
+  
+  }
+  .accordion-item-body p{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+  }
+ 
+  .accordion-item-header {
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  .accordion-item-header::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+  }
+  .accordion-item-header.active::after {
+    content: "\2212";
+  }
+  .accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  .accordion-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    font-weight: bold;
+    border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+  }
+  .accordion-item-body-content p{
+    float: left;
+    color: blue;
+  }
+  .button a{
+    padding: 0.6rem 1.4rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    border: 2px solid #fafafa;
+    font-size: 0.75rem;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 20px;
+  }
